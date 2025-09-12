@@ -1,103 +1,108 @@
+import HeroImg from "@/assets/hero-img.png";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+import LocalExpertsImg from "@/assets/local-experts.png";
+import MaxWidthWrapper from "@/components/max-width";
+
+function Hero() {
+  const actionButtons = [
+    { label: "Buying", href: "#", className: "bg-[#2784CA] text-white" },
+    {
+      label: "Selling",
+      href: "#",
+      className: "bg-white text-black border border-black",
+    },
+    "hr",
+    {
+      label: "Landlords",
+      href: "#",
+      className: "bg-white text-black border border-black",
+    },
+    { label: "Tenants", href: "#", className: "bg-black text-white" },
+  ] as const;
+  return (
+    <div className="relative pb-40">
+      <Image
+        src={HeroImg}
+        alt="Property Nirvana"
+        width={1000}
+        className="absolute -z-20 w-full h-full object-cover object-center"
+      />
+      <div className="inset-0 absolute bg-black/40 -z-10" />
+      <div className="pt-60 text-center">
+        <h1 className="font-platypi text-white text-4xl font-bold">
+          Sell or Let Your Property in West London
+        </h1>
+        <p className="text-white mt-3 text-lg">
+          Trusted local estate agents helping homeowners and landlords achieve
+          the best results.
+        </p>
+      </div>
+      <div className="mt-40  bg-white max-w-5xl p-6 px-8 rounded-md mx-auto">
+        <h3 className="font-medium text-xl">
+          Find Your Perfect Property Match
+        </h3>
+        <div className="flex justify-between items-center gap-4 mt-4">
+          {actionButtons.map((button) =>
+            button === "hr" ? (
+              <div
+                key="hr"
+                className="border-l border-black h-16 -mt-8 self-center"
+              />
+            ) : (
+              <Link
+                key={button.label}
+                href={button.href}
+                className={cn(
+                  `p-4 px-8 font-semibold w-full text-center`,
+                  button.className,
+                )}
+              >
+                {button.label}
+              </Link>
+            ),
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LocalExperts() {
+  return (
+    <MaxWidthWrapper className="mt-20 mb-20 flex gap-20 relative h-fit overflow-hidden">
+      <div className="py-10">
+        <h2 className="font-platypi text-4xl font-semibold">
+          Your Local Property Experts
+        </h2>
+        <p className="text-lg text-gray-700 mt-4">
+          Whether you’re planning to sell your home or rent out your property,
+          we make the process simple, stress-free, and rewarding. With local
+          knowledge of Langley, Slough, Wexham, Burnham & Maidenhead, we deliver
+          honest advice, clear communication, and results you can trust.
+        </p>
+        <div className="flex mt-4 gap-4">
+          <Link href="#">Sell My Property</Link>
+          <Link href="#">Let My Property</Link>
+        </div>
+      </div>
+      <div className="relative min-w-[480px]">
+        <Image
+          src={LocalExpertsImg}
+          alt="Local Experts"
+          className="w-full h-full object-cover absolute object-center"
+        />
+      </div>
+    </MaxWidthWrapper>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <div>
+      <Hero />
+      <LocalExperts />
     </div>
   );
 }
