@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lato.variable} ${platypi.variable} antialiased bg-[#FEF6EE]`}
+        className={`${lato.variable} ${platypi.variable} antialiased bg-background text-foreground`}
       >
         <Navbar />
         {children}

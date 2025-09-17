@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import MaxWidthWrapper from "@/components/max-width";
+import FootNote from "@/components/foot-note";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 function ComparisonTable() {
   const services = [
@@ -101,16 +104,16 @@ function ComparisonTable() {
     { key: "fullManagement", label: "Full Management" },
   ] as const;
   return (
-    <div className="mt-20">
+    <div className="mt-10 md:mt-20">
       <h2 className="font-platypi text-2xl font-semibold">
         Service Comparison Table
       </h2>
 
       <div className="overflow-x-auto mt-8">
-        <div className="border border-black overflow-hidden rounded-lg">
-          <table className="w-full">
+        <div className="border border-black overflow-auto rounded-lg">
+          <table className="w-full min-w-[800px]">
             <thead>
-              <tr className="bg-[#FFF1E3]">
+              <tr className="bg-input/40">
                 <th className="border border-black p-4 text-left">Service</th>
                 {serviceLevels.map((level) => (
                   <th
@@ -124,7 +127,7 @@ function ComparisonTable() {
             </thead>
             <tbody>
               {services.map((service) => (
-                <tr key={service.name} className={"bg-[#FFF1E3]"}>
+                <tr key={service.name} className={"bg-input/40"}>
                   <td className="border border-black p-4">{service.name}</td>
                   {serviceLevels.map((level) => (
                     <td
@@ -155,19 +158,23 @@ type ServiceDetailsProps = {
 function ServiceDetails(props: ServiceDetailsProps) {
   return (
     <div>
-      <h2 className="font-platypi text-2xl font-semibold mt-12">
+      <h2 className="text-xl font-platypi md:text-2xl font-semibold mt-12">
         {props.serviceName}
       </h2>
-      <p className="text-gray-700">{props.description}</p>
+      <p className="text-gray-700 text-sm md:text-base">{props.description}</p>
       {props.detail && (
-        <p className="mt-4 border border-black rounded-lg p-4 font-medium">
+        <p className="mt-4 text-sm md:text-base border border-black rounded-lg p-2 md:p-4 font-medium">
           {props.detail}
         </p>
       )}
       {props.charges && (
-        <p className="bg-[#2784CA] p-4 rounded-sm text-white w-fit ml-auto mt-4">
-          {props.charges}
-        </p>
+        <div className="flex">
+          <p
+            className={cn(buttonVariants({ size: "lg" }), "ml-auto w-fit mt-4")}
+          >
+            {props.charges}
+          </p>
+        </div>
       )}
       {props.additionalCharges && (
         <p className="text-sm text-gray-700 mt-2 ml-auto w-fit">
@@ -184,12 +191,14 @@ export const metadata: Metadata = {
 
 export default function LandlordServices() {
   return (
-    <MaxWidthWrapper className="mt-32 max-w-6xl">
-      <h1 className="font-platypi text-3xl font-bold">Landlord Services</h1>
-      <p className="font-platypi text-gray-700 mt-4">
-        At Property Nirvana, we offer three service levels to suit every
-        landlord — from simple tenant placement to full property management.
-      </p>
+    <MaxWidthWrapper className="mt-10 md:mt-32 max-w-6xl px-4">
+      <div>
+        <h1 className="font-platypi text-3xl font-bold">Landlord Services</h1>
+        <p className="font-platypi text-gray-700 mt-4">
+          At Property Nirvana, we offer three service levels to suit every
+          landlord — from simple tenant placement to full property management.
+        </p>
+      </div>
       <ComparisonTable />
       <ServiceDetails
         serviceName="Let Only Service"
@@ -211,16 +220,14 @@ export default function LandlordServices() {
         charges="16.8% of monthly rent"
         additionalCharges="(inc. VAT)"
       />
-      <div>
-        <h2 className="font-platypi text-2xl font-semibold mt-12">
-          Why Choose Property Nirvana?
-        </h2>
-        <p className="text-gray-700 mt-2">
+      <FootNote>
+        <FootNote.Title>Why Choose Property Nirvana?</FootNote.Title>
+        <FootNote.Content>
           Our flexible service levels let you decide how involved you want to be
           — whether it’s just finding a tenant, collecting rent, or leaving
           everything to us.
-        </p>
-      </div>
+        </FootNote.Content>
+      </FootNote>
     </MaxWidthWrapper>
   );
 }
