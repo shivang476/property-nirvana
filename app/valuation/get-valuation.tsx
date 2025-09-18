@@ -59,20 +59,29 @@ export default function GetValuationForm() {
                     onBlur={field.onBlur}
                   >
                     <div className="flex items-center gap-3">
-                      <RadioGroupItem value="both" />
-                      <Label className="text-sm sm:text-base cursor-pointer">
+                      <RadioGroupItem value="both" id="valuationBoth" />
+                      <Label
+                        className="text-sm sm:text-base cursor-pointer"
+                        htmlFor="valuationBoth"
+                      >
                         Sales & Rental valuation
                       </Label>
                     </div>
                     <div className="flex items-center gap-3">
-                      <RadioGroupItem value="sales" />
-                      <Label className="text-sm sm:text-base cursor-pointer">
+                      <RadioGroupItem value="sales" id="valuationSales" />
+                      <Label
+                        className="text-sm sm:text-base cursor-pointer"
+                        htmlFor="valuationSales"
+                      >
                         Sales Only valuation
                       </Label>
                     </div>
                     <div className="flex items-center gap-3">
-                      <RadioGroupItem value="rental" />
-                      <Label className="text-sm sm:text-base cursor-pointer">
+                      <RadioGroupItem value="rental" id="valuationRent" />
+                      <Label
+                        className="text-sm sm:text-base cursor-pointer"
+                        htmlFor="valuationRent"
+                      >
                         Rental Only valuation
                       </Label>
                     </div>
