@@ -3,6 +3,7 @@ import MaxWidthWrapper from "@/components/max-width";
 import FootNote from "@/components/foot-note";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { CtaCards } from "@/components/cta-cards";
 
 function ComparisonTable() {
   const services = [
@@ -191,43 +192,46 @@ export const metadata: Metadata = {
 
 export default function LandlordServices() {
   return (
-    <MaxWidthWrapper className="mt-10 md:mt-32 max-w-6xl px-4">
-      <div>
-        <h1 className="font-platypi text-3xl font-bold">Landlord Services</h1>
-        <p className="font-platypi text-gray-700 mt-4">
-          At Property Nirvana, we offer three service levels to suit every
-          landlord — from simple tenant placement to full property management.
-        </p>
-      </div>
-      <ComparisonTable />
-      <ServiceDetails
-        serviceName="Let Only Service"
-        detail="We: - Advise on furniture, decoration, and presentation to maximise rental value. - Market your property across our website, major portals, lettings lists, and local press. - Arrange and attend all tenant viewings (7 days a week, 8am–9pm). - Carry out professional tenant referencing, including credit and guarantor checks. - Draft tenancy agreements and necessary documentation. - Collect the first month’s rent and deposit. - Notify utility companies and local authorities of new occupiers. - Set up tenant standing orders to pay future rent directly to you."
-        charges="One-off payment of £354 inc."
-        additionalCharges="VAT (per tenancy)"
-      />
-      <ServiceDetails
-        serviceName="Rent Collection Service"
-        description="Ideal if you want us to handle rent payments but prefer to manage repairs yourself. "
-        detail="In addition to Let Only, we: - Collect rent on your behalf and transfer funds directly to your bank. - Provide monthly rent statements with income, expenses, and VAT breakdowns. - Chase late payments promptly and advise on legal recovery if necessary. - Handle renewals and lease extensions."
-        charges="10.8% of monthly rent"
-        additionalCharges="(inc. VAT)"
-      />
-      <ServiceDetails
-        serviceName="Full Management Service"
-        description="The perfect solution for landlords seeking total peace of mind."
-        detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
-        charges="16.8% of monthly rent"
-        additionalCharges="(inc. VAT)"
-      />
-      <FootNote>
-        <FootNote.Title>Why Choose Property Nirvana?</FootNote.Title>
-        <FootNote.Content>
-          Our flexible service levels let you decide how involved you want to be
-          — whether it’s just finding a tenant, collecting rent, or leaving
-          everything to us.
-        </FootNote.Content>
-      </FootNote>
-    </MaxWidthWrapper>
+    <div>
+      <MaxWidthWrapper className="mt-10 md:mt-20 max-w-6xl px-4">
+        <div>
+          <h1 className="font-platypi text-3xl font-bold">Landlord Services</h1>
+          <p className="font-platypi text-gray-700 mt-4">
+            At Property Nirvana, we offer three service levels to suit every
+            landlord — from simple tenant placement to full property management.
+          </p>
+        </div>
+        <ComparisonTable />
+        <ServiceDetails
+          serviceName="Let Only Service"
+          detail="We: - Advise on furniture, decoration, and presentation to maximise rental value. - Market your property across our website, major portals, lettings lists, and local press. - Arrange and attend all tenant viewings (7 days a week, 8am–9pm). - Carry out professional tenant referencing, including credit and guarantor checks. - Draft tenancy agreements and necessary documentation. - Collect the first month’s rent and deposit. - Notify utility companies and local authorities of new occupiers. - Set up tenant standing orders to pay future rent directly to you."
+          charges="One-off payment of £354 inc."
+          additionalCharges="VAT (per tenancy)"
+        />
+        <ServiceDetails
+          serviceName="Rent Collection Service"
+          description="Ideal if you want us to handle rent payments but prefer to manage repairs yourself. "
+          detail="In addition to Let Only, we: - Collect rent on your behalf and transfer funds directly to your bank. - Provide monthly rent statements with income, expenses, and VAT breakdowns. - Chase late payments promptly and advise on legal recovery if necessary. - Handle renewals and lease extensions."
+          charges="10.8% of monthly rent"
+          additionalCharges="(inc. VAT)"
+        />
+        <ServiceDetails
+          serviceName="Full Management Service"
+          description="The perfect solution for landlords seeking total peace of mind."
+          detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
+          charges="16.8% of monthly rent"
+          additionalCharges="(inc. VAT)"
+        />
+        <FootNote>
+          <FootNote.Title>Why Choose Property Nirvana?</FootNote.Title>
+          <FootNote.Content>
+            Our flexible service levels let you decide how involved you want to
+            be — whether it’s just finding a tenant, collecting rent, or leaving
+            everything to us.
+          </FootNote.Content>
+        </FootNote>
+      </MaxWidthWrapper>
+      <CtaCards className="p-0 mt-20" />
+    </div>
   );
 }

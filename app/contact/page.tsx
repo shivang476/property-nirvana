@@ -3,6 +3,7 @@ import OwnerPhoto from "@/assets/owner-photo.jpg";
 import Image from "next/image";
 import ContactForm from "./contact-form";
 import FootNote from "@/components/foot-note";
+import { CtaCards } from "@/components/cta-cards";
 
 export default function ContactUs() {
   return (
@@ -36,6 +37,7 @@ export default function ContactUs() {
           </FootNote.Content>
         </FootNote>
       </div>
+      <CtaCards className="p-0 mt-0" />
     </MaxWidthWrapper>
   );
 }

@@ -1,8 +1,11 @@
+import { CtaCards } from "@/components/cta-cards";
 import FootNote from "@/components/foot-note";
 import GuideEntry from "@/components/guide-entry";
 import HeadingFrame from "@/components/heading-frame";
 import MaxWidthWrapper from "@/components/max-width";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function SellersGuide() {
   return (
@@ -102,12 +105,19 @@ export default function SellersGuide() {
             us today to book your free consultation.
           </FootNote.Content>
         </FootNote>
-        <div className="flex justify-center mt-20">
-          <Button className="px-10 py-4 rounded-lg" size="xl">
-            Contact Us
-          </Button>
-        </div>
+        {/* <div className="flex justify-center mt-10"> */}
+        {/*   <Link */}
+        {/*     className={cn( */}
+        {/*       buttonVariants({ size: "lg" }), */}
+        {/*       "px-10 py-4 rounded-lg", */}
+        {/*     )} */}
+        {/*     href="/contact" */}
+        {/*   > */}
+        {/*     Contact Us */}
+        {/*   </Link> */}
+        {/* </div> */}
       </MaxWidthWrapper>
+      <CtaCards className="p-0 mt-10" />
     </div>
   );
 }

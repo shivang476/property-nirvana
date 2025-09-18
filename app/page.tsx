@@ -7,11 +7,8 @@ import RightMoveImg from "@/assets/right-move.png";
 import SellingImg from "@/assets/sell-home.png";
 import RentingImg from "@/assets/rent-property.png";
 import MaxWidthWrapper from "@/components/max-width";
-import Cta1Img from "@/assets/cta1.jpg";
-import Cta2Img from "@/assets/cta2.jpg";
-import Cta3Img from "@/assets/cta3.jpg";
-import { Card, CardContent } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
+import { CtaCards } from "@/components/cta-cards";
 
 function Hero() {
   return (
@@ -39,7 +36,7 @@ function Hero() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 mt-4">
           <div className="grid gap-4 grid-cols-2 w-full">
             <Link
-              href="#"
+              href="/buyers-guide"
               className={cn(
                 buttonVariants({
                   size: "xl",
@@ -51,7 +48,7 @@ function Hero() {
               Buying
             </Link>
             <Link
-              href="#"
+              href="/sellers-guide"
               className={cn(
                 buttonVariants({
                   size: "xl",
@@ -66,7 +63,7 @@ function Hero() {
           <div className="border-t md:border-t-0 w-8/12 md:w-px md:border-l md:-mt-8 h-px md:h-16 self-center border-gray-400/40" />
           <div className="grid gap-4 grid-cols-2 w-full">
             <Link
-              href="#"
+              href="/landlord-services"
               className={cn(
                 buttonVariants({
                   size: "xl",
@@ -78,7 +75,7 @@ function Hero() {
               Landlords
             </Link>
             <Link
-              href="#"
+              href="/renters-guide"
               className={cn(
                 buttonVariants({
                   size: "xl",
@@ -111,7 +108,7 @@ function LocalExperts() {
         </p>
         <div className="flex mt-4 gap-4">
           <Link
-            href="#"
+            href="/sellers-guide"
             className={buttonVariants({
               size: "xl",
               variant: "default",
@@ -121,7 +118,7 @@ function LocalExperts() {
             Sell My Property
           </Link>
           <Link
-            href="#"
+            href="/landlord-services"
             className={buttonVariants({
               size: "xl",
               variant: "secondary",
@@ -171,12 +168,12 @@ function TheRightMove() {
               variant: "default",
               className: "rounded-none font-semibold",
             })}
-            href="#"
+            href="/sellers-guide"
           >
             Sell With Us
           </Link>
           <Link
-            href="#"
+            href="/landlord-services"
             className={buttonVariants({
               size: "xl",
               variant: "secondary",
@@ -220,7 +217,7 @@ function ThinkingOfSelling() {
               </ul>
             </div>
             <Link
-              href="#"
+              href="/valuation"
               className={buttonVariants({
                 size: "lg",
                 className: "rounded-none",
@@ -276,7 +273,7 @@ function RentOutYourProperty() {
               </ul>
             </div>
             <Link
-              href="#"
+              href="/renters-guide"
               className={buttonVariants({
                 size: "lg",
                 className: "rounded-none",
@@ -305,7 +302,7 @@ function AreasWeCover() {
           </p>
         </div>
         <Link
-          href="#"
+          href="/contact"
           className={cn(
             buttonVariants({
               size: "2xl",
@@ -326,70 +323,6 @@ function AreasWeCover() {
   );
 }
 
-function Ctc() {
-  const cards = [
-    {
-      title: "Get a Free Valuation",
-      description:
-        "If you're contemplating a move, arrange a free, no obligation valuation of your property at a time to suit you.",
-      buttonText: "Book Valuation",
-      image: Cta1Img,
-    },
-    {
-      title: "Sell With Property Nirvana",
-      description:
-        "Book your appointment with us today and let us help you keep moving. We’ll be offering virtual valuations in the first...",
-      buttonText: "Book Other Services",
-      image: Cta2Img,
-    },
-    {
-      title: "Get in Touch",
-      description:
-        "If you would like to discuss your property-related enquiries, or have any questions, get in touch with our friendly team.",
-      buttonText: "Get in Touch",
-      image: Cta3Img,
-    },
-  ];
-  return (
-    <MaxWidthWrapper className="grid place-items-center p-4 md:grid-cols-2  lg:grid-cols-3 gap-10 mt-20">
-      {cards.map((card) => (
-        <Card
-          key={card.title}
-          className="p-0 rounded-lg overflow-hidden bg-[#5C5C5C]"
-        >
-          <CardContent className="p-0">
-            <Image
-              src={card.image}
-              alt={card.title}
-              className="w-full h-56 object-cover object-center"
-            />
-            <div className="p-4 md:p-8 flex flex-col gap-4">
-              <div className="p-4 border-2 border-white rounded-lg bg-white/10 backdrop-blur-xl text-white -mt-20">
-                <h4 className="font-semibold text-lg md:text-xl">
-                  {card.title}
-                </h4>
-                <p className="text-sm line-clamp-3">{card.description}</p>
-              </div>
-              <Link
-                className={cn(
-                  buttonVariants({
-                    size: "lg",
-                    variant: "default",
-                    className: "rounded-none mt-auto py-6",
-                  }),
-                )}
-                href="#"
-              >
-                {card.buttonText}
-              </Link>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </MaxWidthWrapper>
-  );
-}
-
 export default function Home() {
   return (
     <div>
@@ -399,7 +332,7 @@ export default function Home() {
       <ThinkingOfSelling />
       <RentOutYourProperty />
       <AreasWeCover />
-      <Ctc />
+      <CtaCards />
     </div>
   );
 }

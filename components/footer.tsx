@@ -21,7 +21,7 @@ export default function Footer() {
   const linkCols = [
     [
       { label: "About us", href: "#" },
-      { label: "Contact us", href: "#" },
+      { label: "Contact us", href: "/contact" },
       {
         label: "Cookie Policy",
         href: "#",
