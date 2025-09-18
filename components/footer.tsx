@@ -67,7 +67,10 @@ export default function Footer() {
               <ul key={idx} className="flex flex-col gap-1 md:gap-4">
                 {col.map((item, idx) => (
                   <li key={idx}>
-                    <Link href={item.href} className="text-white">
+                    <Link
+                      href={item.href}
+                      className="text-white text-sm md:text-base hover:underline"
+                    >
                       {item.label}
                     </Link>
                   </li>

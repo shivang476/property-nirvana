@@ -113,7 +113,7 @@ function LocalExperts() {
           <Link
             href="#"
             className={buttonVariants({
-              size: "2xl",
+              size: "xl",
               variant: "default",
               className: "rounded-none font-semibold",
             })}
@@ -123,7 +123,7 @@ function LocalExperts() {
           <Link
             href="#"
             className={buttonVariants({
-              size: "2xl",
+              size: "xl",
               variant: "secondary",
               className: "rounded-none font-semibold",
             })}
@@ -167,7 +167,7 @@ function TheRightMove() {
         <div className="flex mt-8 gap-4">
           <Link
             className={buttonVariants({
-              size: "2xl",
+              size: "xl",
               variant: "default",
               className: "rounded-none font-semibold",
             })}
@@ -178,7 +178,7 @@ function TheRightMove() {
           <Link
             href="#"
             className={buttonVariants({
-              size: "2xl",
+              size: "xl",
               variant: "secondary",
               className: "rounded-none font-semibold",
             })}
@@ -193,7 +193,7 @@ function TheRightMove() {
 
 function ThinkingOfSelling() {
   return (
-    <MaxWidthWrapper className="flex mt-32">
+    <MaxWidthWrapper className="flex mt-10 md:mt-32">
       <div className="md:basis-[40%] flex items-center">
         <div className="bg-[#FFF1E3] p-6 md:px-14 md:py-10 rounded-md absolute m-2">
           <h2 className="font-platypi text-2xl md:text-3xl font-semibold">
@@ -243,7 +243,7 @@ function ThinkingOfSelling() {
 
 function RentOutYourProperty() {
   return (
-    <MaxWidthWrapper className="flex mt-32 relative">
+    <MaxWidthWrapper className="flex mt-10 md:mt-32 relative">
       <Image
         src={RentingImg}
         alt="Selling"
@@ -293,7 +293,7 @@ function RentOutYourProperty() {
 
 function AreasWeCover() {
   return (
-    <MaxWidthWrapper className="mt-20 p-2">
+    <MaxWidthWrapper className="mt-10 md:mt-20 p-2">
       <div className="flex justify-between gap-4 items-center flex-col md:flex-row">
         <div>
           <h2 className="font-platypi text-2xl md:text-4xl font-semibold">

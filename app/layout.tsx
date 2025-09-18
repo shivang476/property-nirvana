@@ -4,6 +4,9 @@ import { Platypi } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Link from "next/link";
+import Image from "next/image";
+import WhatsAppIcon from "@/assets/icons/whatsapp.png";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -33,11 +36,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lato.variable} ${platypi.variable} antialiased bg-background text-foreground`}
+        className={`${lato.variable} ${platypi.variable} antialiased bg-background text-foreground relative`}
       >
         <Navbar />
         {children}
         <Footer />
+        <Link
+          href={`https://wa.me/+447733487823?text=${encodeURIComponent(
+            "Hello, I am interested in learning more about your property listings. Could you please provide me with the details?",
+          )}`}
+          className="fixed right-2 bottom-2 sm:right-4 sm:bottom-4 md:bottom-6 md:right-6 lg:right-8 lg:bottom-8 z-[999]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={WhatsAppIcon}
+            width={56}
+            className="size-12 md:size-14"
+            alt="Whatsapp"
+          />
+        </Link>
       </body>
     </html>
   );
