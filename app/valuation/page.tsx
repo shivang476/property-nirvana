@@ -6,7 +6,7 @@ export default function GetValuation() {
   return (
     <div>
       <HeadingFrame heading="Value My Property" />
-      <MaxWidthWrapper className="max-w-3xl">
+      <MaxWidthWrapper className="max-w-3xl p-4">
         <GetValuationForm />
       </MaxWidthWrapper>
     </div>
