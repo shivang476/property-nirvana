@@ -3,9 +3,6 @@ import FootNote from "@/components/foot-note";
 import GuideEntry from "@/components/guide-entry";
 import HeadingFrame from "@/components/heading-frame";
 import MaxWidthWrapper from "@/components/max-width";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function SellersGuide() {
   return (

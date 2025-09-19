@@ -7,7 +7,7 @@ export default function RentersGuide() {
   return (
     <div>
       <HeadingFrame heading="Renters Guide" />
-      <MaxWidthWrapper>
+      <MaxWidthWrapper className="px-4">
         <FootNote className="mt-10">
           <FootNote.Title>
             Next Steps After Viewing a Rental Property in England

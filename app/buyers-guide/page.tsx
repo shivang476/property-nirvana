@@ -2,7 +2,9 @@ import FootNote from "@/components/foot-note";
 import GuideEntry from "@/components/guide-entry";
 import HeadingFrame from "@/components/heading-frame";
 import MaxWidthWrapper from "@/components/max-width";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function BuyersGuide() {
   return (
@@ -110,9 +112,15 @@ export default function BuyersGuide() {
           </FootNote.Content>
         </FootNote>
         <div className="flex justify-center mt-20">
-          <Button className="px-10 py-4 rounded-lg" size="xl">
+          <Link
+            href="/contact"
+            className={cn(
+              buttonVariants({ size: "xl" }),
+              "px-10 py-4 rounded-lg",
+            )}
+          >
             Contact Us
-          </Button>
+          </Link>
         </div>
       </MaxWidthWrapper>
     </div>

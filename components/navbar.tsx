@@ -35,7 +35,7 @@ export default function Navbar() {
       href: "#",
       label: "Selling",
       innerLinks: [
-        { href: "/contact", label: "Sell your property" },
+        { href: "/sell-your-property", label: "Sell your property" },
         { href: "/sellers-guide", label: "Sellers Guide" },
         { href: "/valuation", label: "Get valuation" },
       ],
@@ -56,7 +56,7 @@ export default function Navbar() {
         { href: "/tenant-fees", label: "Tenants Fees" },
       ],
     },
-    { href: "#", label: "Other Services" },
+    { href: "/other-services", label: "Other Services" },
   ];
 
   React.useEffect(() => {

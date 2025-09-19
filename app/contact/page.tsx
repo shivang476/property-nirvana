@@ -22,7 +22,9 @@ export default function ContactUs() {
             <span className="text-zinc-300 text-sm">Residential Sales</span>
             <h2 className="text-2xl font-semibold mt-4">Mehar Gill</h2>
             <h4 className="font-medium text-sm mt-4">West London</h4>
-            <span className="text-xs text-zinc-400">Contact: 07949 038303</span>
+            <span className="text-xs text-zinc-400">
+              Contact: +44 7949 038303
+            </span>
           </div>
         </div>
         <hr className="my-6" />

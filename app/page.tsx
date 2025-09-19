@@ -9,6 +9,8 @@ import RentingImg from "@/assets/rent-property.png";
 import MaxWidthWrapper from "@/components/max-width";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaCards } from "@/components/cta-cards";
+import AreaWeCover from "@/assets/covered-areas.png";
+import AreaMap from "@/components/area-map";
 
 function Hero() {
   return (
@@ -108,7 +110,7 @@ function LocalExperts() {
         </p>
         <div className="flex mt-4 gap-4">
           <Link
-            href="/sellers-guide"
+            href="/sell-your-property"
             className={buttonVariants({
               size: "xl",
               variant: "default",
@@ -314,11 +316,7 @@ function AreasWeCover() {
           Get in Touch
         </Link>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.298516089851!2d144.9630579153182!3d-37.81410797975143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642f0f1c97f01%3A0xe1b0d2d3c9f2b1d!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1678901234567!5m2!1sen!2sau"
-        className="w-full h-[400px] mt-10 border-0"
-        loading="lazy"
-      />
+      <AreaMap />
     </MaxWidthWrapper>
   );
 }
