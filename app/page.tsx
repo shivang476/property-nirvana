@@ -9,7 +9,6 @@ import RentingImg from "@/assets/rent-property.png";
 import MaxWidthWrapper from "@/components/max-width";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaCards } from "@/components/cta-cards";
-import AreaWeCover from "@/assets/covered-areas.png";
 import AreaMap from "@/components/area-map";
 
 function Hero() {
@@ -24,18 +23,18 @@ function Hero() {
       <div className="inset-0 absolute bg-black/40 -z-10" />
       <div className="pt-40 md:pt-60 text-center">
         <h1 className="font-platypi text-white text-2xl md:text-4xl font-bold">
-          Sell or Let Your Property in West London
+          Your Trusted Estate Agents covering West London to Reading
         </h1>
         <p className="text-white mt-3 text-sm md:text-lg">
-          Trusted local estate agents helping homeowners and landlords achieve
-          the best results.
+          Buy, sell, rent, or let with ease — backed by local expertise and
+          proven results.
         </p>
       </div>
-      <div className="mt-10 md:mt-20 lg:mt-40 bg-white max-w-5xl p-4 md:p-6 md:px-8 rounded-md mx-auto">
-        <h3 className="font-medium text-sm md:text-xl">
+      <div className="mt-10 md:mt-20 lg:mt-40 bg-white max-w-5xl p-4 md:p-6 md:pt-4 md:px-8 rounded-md mx-auto">
+        <h3 className="font-medium text-sm md:text-xl text-center">
           Find Your Perfect Property Match
         </h3>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 mt-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4 mt-2">
           <div className="grid gap-4 grid-cols-2 w-full">
             <Link
               href="/buyers-guide"
@@ -62,7 +61,7 @@ function Hero() {
               Selling
             </Link>
           </div>
-          <div className="border-t md:border-t-0 w-8/12 md:w-px md:border-l md:-mt-8 h-px md:h-16 self-center border-gray-400/40" />
+          <div className="border-t md:border-t-0 w-8/12 md:w-px md:border-l h-px md:h-16 self-center border-gray-400/40" />
           <div className="grid gap-4 grid-cols-2 w-full">
             <Link
               href="/landlord-services"
