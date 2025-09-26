@@ -31,6 +31,11 @@ export const ValuationSchema = z.object({
   postcode: z.string().min(1, "Postcode is required"),
   consent: z.literal(true, "You must agree to the terms"),
   valuationType: z.enum(["sale", "rental", "both"]),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .optional()
+    .or(z.literal("")),
 });
 
 export type ValuationSchemaType = z.infer<typeof ValuationSchema>;

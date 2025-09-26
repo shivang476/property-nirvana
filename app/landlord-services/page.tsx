@@ -4,6 +4,7 @@ import FootNote from "@/components/foot-note";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CtaCards } from "@/components/cta-cards";
+import { CheckIcon, MinusIcon } from "lucide-react";
 
 function ComparisonTable() {
   const services = [
@@ -12,90 +13,105 @@ function ComparisonTable() {
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Accompanied Viewings (7 days a week)",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Tenant Referencing & Guarantor Checks",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Tenancy Agreement Preparation",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "First Month's Rent & Deposit Collection",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Utility & Council Tax Notifications",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Tenant Standing Order Setup",
       letOnly: true,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Monthly Rent Collection & Statements",
       letOnly: false,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Rent renewals and lease extensions",
       letOnly: false,
       rentCollection: true,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Repairs & Maintenance Management",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Tenant Check-in & Check-out",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Inventory Coordination",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Quarterly Property Inspections & Reports",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "Monitoring of legal requirements",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
     {
       name: "End-of-Tenancy Deposit Handling",
       letOnly: false,
       rentCollection: false,
       fullManagement: true,
+      rentGuarantee: true,
     },
   ];
 
@@ -103,6 +119,7 @@ function ComparisonTable() {
     { key: "letOnly", label: "Let Only" },
     { key: "rentCollection", label: "Rent Collection" },
     { key: "fullManagement", label: "Full Management" },
+    { key: "rentGuarantee", label: "Rent Guarantee" },
   ] as const;
   return (
     <div className="mt-10 md:mt-20">
@@ -135,11 +152,32 @@ function ComparisonTable() {
                       key={level.key}
                       className="border border-black p-4 text-center"
                     >
-                      {service[level.key] ? "✅" : "❌"}
+                      {service[level.key] ? (
+                        <CheckIcon className="mx-auto size-5" />
+                      ) : (
+                        <MinusIcon className="mx-auto size-4" />
+                      )}
                     </td>
                   ))}
                 </tr>
               ))}
+              <tr className="bg-input/50">
+                <td className="border border-black p-4 font-semibold">
+                  Typical Fees
+                </td>
+                <td className="border border-black p-4 text-center font-medium text-sm">
+                  One-off fee of £354 inc. VAT
+                </td>
+                <td className="border border-black p-4 text-center font-medium text-sm">
+                  10.8% of monthly rent
+                </td>
+                <td className="border border-black p-4 text-center font-medium text-sm">
+                  16.8% of monthly rent
+                </td>
+                <td className="border border-black p-4 text-center font-medium text-sm">
+                  16.8% of monthly rent
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -220,6 +258,13 @@ export default function LandlordServices() {
           description="The perfect solution for landlords seeking total peace of mind."
           detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
           charges="16.8% of monthly rent"
+          additionalCharges="(inc. VAT)"
+        />
+        <ServiceDetails
+          serviceName="Full Management + Guaranteed Rent Service"
+          description="The perfect solution for landlords seeking total peace of mind."
+          detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
+          charges="Price is Subject to Each Property"
           additionalCharges="(inc. VAT)"
         />
         <FootNote>

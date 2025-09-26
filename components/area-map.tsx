@@ -8,7 +8,7 @@ export default function AreaMap() {
         <Image
           src={AreaCovered}
           alt="Map showing areas covered"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover"
         />
       </div>
     </div>

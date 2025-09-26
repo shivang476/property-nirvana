@@ -97,7 +97,13 @@ export default function Navbar() {
       >
         <MaxWidthWrapper className="py-4 flex items-center justify-between px-4">
           {/* Logo */}
-          <Link href="/">
+          <Link
+            href="/"
+            className={cn(
+              "bg-white/90 md:p-2 group-hover:bg-transparent",
+              hasScrolled && "bg-transparent",
+            )}
+          >
             <Image src={Logo} alt="Nirvana Logo" width={200} />
           </Link>
 

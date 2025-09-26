@@ -1,6 +1,4 @@
 import MaxWidthWrapper from "@/components/max-width";
-import OwnerPhoto from "@/assets/owner-photo.jpg";
-import Image from "next/image";
 import ContactForm from "./contact-form";
 import FootNote from "@/components/foot-note";
 import { CtaCards } from "@/components/cta-cards";
@@ -13,12 +11,7 @@ export default function ContactUs() {
           Contact Mehar Gill
         </h2>
         <div className="flex mt-4 h-44 overflow-hidden text-white">
-          <Image
-            src={OwnerPhoto}
-            alt="Owner Photo"
-            className="w-56 md:w-80 object-cover object-center rounded-l-lg"
-          />
-          <div className="bg-[#232323] w-60 rounded-r-lg p-4 flex flex-col">
+          <div className="bg-[#232323] w-60 rounded-lg p-4 flex flex-col">
             <span className="text-zinc-300 text-sm">Residential Sales</span>
             <h2 className="text-2xl font-semibold mt-4">Mehar Gill</h2>
             <h4 className="font-medium text-sm mt-4">West London</h4>

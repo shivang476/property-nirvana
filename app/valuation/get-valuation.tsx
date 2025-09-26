@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Textarea } from "@/components/ui/textarea";
 import { ValuationSchema, ValuationSchemaType } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -28,6 +29,7 @@ export default function GetValuationForm() {
       phone: "",
       postcode: "",
       valuationType: "both",
+      message: "",
     },
   });
 
@@ -192,6 +194,18 @@ export default function GetValuationForm() {
                       className="h-10 sm:h-11"
                       {...field}
                     />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem className="sm:col-span-2">
+                  <FormLabel>Enquiry (Optional)</FormLabel>
+                  <FormControl>
+                    <Textarea placeholder="Enquiry" {...field} />
                   </FormControl>
                 </FormItem>
               )}

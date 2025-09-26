@@ -1,6 +1,6 @@
-import Cta1Img from "@/assets/cta1.jpg";
-import Cta2Img from "@/assets/cta2.jpg";
-import Cta3Img from "@/assets/cta3.jpg";
+import Cta1Img from "@/assets/cta1.png";
+import Cta2Img from "@/assets/cta2.png";
+import Cta3Img from "@/assets/cta3.png";
 import { Card, CardContent } from "@/components/ui/card";
 import MaxWidthWrapper from "./max-width";
 import Image from "next/image";

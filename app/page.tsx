@@ -10,6 +10,8 @@ import MaxWidthWrapper from "@/components/max-width";
 import { buttonVariants } from "@/components/ui/button";
 import { CtaCards } from "@/components/cta-cards";
 import AreaMap from "@/components/area-map";
+import { Card, CardContent } from "@/components/ui/card";
+import { StarIcon } from "lucide-react";
 
 function Hero() {
   return (
@@ -289,6 +291,63 @@ function RentOutYourProperty() {
   );
 }
 
+function Testimonials() {
+  const testimonials = [
+    {
+      quote:
+        "Great location - walking distance to the metro and grocery stores. Building is quite at night.",
+      name: "Sophie Brown",
+      role: "Teacher",
+      starRating: 4,
+    },
+    {
+      quote:
+        "Helpful agent and smooth paperwork. Would’ve liked clearer move-in instructions.",
+      name: "James Walker",
+      role: "Founder",
+      starRating: 5,
+    },
+    {
+      quote:
+        "Affordable rent but thin walls. Not ideal if you work from home and need silence.",
+      name: "Emily Thompson",
+      role: "Marketing Manager",
+      starRating: 4,
+    },
+  ];
+  return (
+    <MaxWidthWrapper className="mt-10 md:mt-20 p-2">
+      <h2 className="font-platypi text-2xl md:text-4xl font-semibold text-center">
+        What Our Clients Say
+      </h2>
+      <p className="md:text-lg text-gray-700 mt-2 text-center">
+        Hear from our satisfied clients who have experienced the Property
+        Nirvana difference.
+      </p>
+      <div className="mt-10 grid gap-6 md:gap-10 grid-cols-1 md:grid-cols-3">
+        {testimonials.map((testimonial, index) => (
+          <Card key={index} className="bg-[#232323] text-white shadow-md p-0">
+            <CardContent className="p-6 flex flex-col h-full">
+              <div className="flex text-yellow-500">
+                {Array.from({ length: testimonial.starRating }).map((_, i) => (
+                  <StarIcon key={i} className="size-5 fill-yellow-500" />
+                ))}
+              </div>
+              <p className="italic md:text-lg font-medium mt-4 flex-grow">
+                "{testimonial.quote}"
+              </p>
+              <div>
+                <h4 className="font-semibold mt-4">{testimonial.name}</h4>
+                <p className="text-sm text-gray-300">{testimonial.role}</p>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </MaxWidthWrapper>
+  );
+}
+
 function AreasWeCover() {
   return (
     <MaxWidthWrapper className="mt-10 md:mt-20 p-2">
@@ -328,6 +387,7 @@ export default function Home() {
       <TheRightMove />
       <ThinkingOfSelling />
       <RentOutYourProperty />
+      <Testimonials />
       <AreasWeCover />
       <CtaCards />
     </div>
