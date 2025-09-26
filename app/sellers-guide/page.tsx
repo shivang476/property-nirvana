@@ -102,17 +102,6 @@ export default function SellersGuide() {
             us today to book your free consultation.
           </FootNote.Content>
         </FootNote>
-        {/* <div className="flex justify-center mt-10"> */}
-        {/*   <Link */}
-        {/*     className={cn( */}
-        {/*       buttonVariants({ size: "lg" }), */}
-        {/*       "px-10 py-4 rounded-lg", */}
-        {/*     )} */}
-        {/*     href="/contact" */}
-        {/*   > */}
-        {/*     Contact Us */}
-        {/*   </Link> */}
-        {/* </div> */}
       </MaxWidthWrapper>
       <CtaCards className="p-0 mt-10" />
     </div>

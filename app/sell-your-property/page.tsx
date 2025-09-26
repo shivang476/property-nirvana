@@ -6,6 +6,80 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
+function AgencyGuide() {
+  const agencyTypes = [
+    { key: "soleAgency", label: "Sole Agency" },
+    { key: "jointAgency", label: "Joint Agency" },
+    { key: "multipleAgencies", label: "Multiple Agencies" },
+  ] as const;
+
+  const tableData = {
+    fees: {
+      soleAgency: "0.7%",
+      jointAgency: "1.25%",
+      multipleAgencies: "1.75%",
+    },
+    terms: {
+      soleAgency: "(16 week minimum term)",
+      jointAgency: "(16 week minimum term)",
+      multipleAgencies: "(30 days notice period)",
+    },
+  };
+
+  return (
+    <div className="mt-10 md:mt-20">
+      <h2 className="font-platypi text-2xl font-semibold">
+        Agency Comparison Table
+      </h2>
+      <div className="overflow-x-auto mt-8">
+        <div className="border border-black overflow-auto rounded-lg">
+          <table className="w-full min-w-[600px]">
+            <thead>
+              <tr className="bg-input/40">
+                <th className="border border-black p-4 text-left">Service</th>
+                {agencyTypes.map((type) => (
+                  <th
+                    key={type.key}
+                    className="border border-black p-4 text-center"
+                  >
+                    {type.label}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-input/40">
+                <td className="border border-black p-4 font-semibold">
+                  Commission Rate
+                </td>
+                {agencyTypes.map((type) => (
+                  <td
+                    key={type.key}
+                    className="border border-black p-4 text-center font-medium"
+                  >
+                    {tableData.fees[type.key]}
+                  </td>
+                ))}
+              </tr>
+              <tr className="bg-input/50">
+                <td className="border border-black p-4 font-semibold">Terms</td>
+                {agencyTypes.map((type) => (
+                  <td
+                    key={type.key}
+                    className="border border-black p-4 text-center font-medium text-sm"
+                  >
+                    {tableData.terms[type.key]}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SellYourProperty() {
   return (
     <div>
@@ -53,6 +127,7 @@ export default function SellYourProperty() {
             ]}
           />
         </div>
+        <AgencyGuide />
         <div className="flex justify-center mt-20">
           <Link
             href="/contact"
