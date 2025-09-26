@@ -334,7 +334,7 @@ function Testimonials() {
                 ))}
               </div>
               <p className="italic md:text-lg font-medium mt-4 flex-grow">
-                "{testimonial.quote}"
+                {`"${testimonial.quote}"`}
               </p>
               <div>
                 <h4 className="font-semibold mt-4">{testimonial.name}</h4>
