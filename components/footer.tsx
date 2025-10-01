@@ -20,11 +20,11 @@ export default function Footer() {
   ];
   const linkCols = [
     [
-      { label: "About us", href: "#" },
+      { label: "About us", href: "/about-us" },
       { label: "Contact us", href: "/contact" },
       {
         label: "Cookie Policy",
-        href: "#",
+        href: "/tos",
       },
     ],
     [
@@ -38,7 +38,7 @@ export default function Footer() {
       },
       {
         label: "Privacy Policy",
-        href: "#",
+        href: "/tos",
       },
     ],
   ];

@@ -1,12 +1,14 @@
 export default function GuideEntry({
   title,
   points,
+  id,
 }: {
   title: string;
   points: string[];
+  id?: string;
 }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col" id={id}>
       <h4 className="text-xl md:text-2xl font-semibold font-platypi">
         {title}
       </h4>
