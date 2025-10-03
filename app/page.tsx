@@ -103,14 +103,7 @@ function Cta() {
         Property, handled personally and made our priority.
       </h2>
       <p className="md:text-lg text-gray-700 mt-2 md:mt-4">
-        At Property Nirvana, we don't just manage property — we excel at it. Our
-        team combines deep expertise with genuine care, ensuring every buying,
-        selling or letting journey is handled to the highest standard. From
-        precise valuations and powerful marketing to seamless negotiations and
-        attentive aftercare, we pour detail and dedication into every step,
-        because your property deserves nothing less than the best. Contact us
-        today and discover how Property Nirvana can make your property goals a
-        reality.
+        {`At Property Nirvana, we don't just manage property — we excel at it. Our team combines deep expertise with genuine care, ensuring every buying, selling or letting journey is handled to the highest standard. From precise valuations and powerful marketing to seamless negotiations and attentive aftercare, we pour detail and dedication into every step, because your property deserves nothing less than the best. Contact us today and discover how Property Nirvana can make your property goals a reality.`}
       </p>
     </MaxWidthWrapper>
   );
