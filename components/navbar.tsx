@@ -116,7 +116,8 @@ export default function Navbar() {
               width={200}
               className={cn(
                 "hidden group-hover:block",
-                (hasScrolled || mobileOpen) && "block",
+                (hasScrolled || mobileOpen || needInvert || anyCardOpen) &&
+                  "block",
               )}
             />
             <Image
@@ -125,7 +126,8 @@ export default function Navbar() {
               width={200}
               className={cn(
                 "block group-hover:hidden",
-                (hasScrolled || mobileOpen) && "hidden",
+                (hasScrolled || mobileOpen || needInvert || anyCardOpen) &&
+                  "hidden",
               )}
             />
           </Link>
