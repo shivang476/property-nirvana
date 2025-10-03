@@ -96,9 +96,29 @@ function Hero() {
   );
 }
 
+function Cta() {
+  return (
+    <MaxWidthWrapper className="mt-10 md:mt-20 mb-20 flex flex-col gap-4 relative h-fit overflow-hidden text-center">
+      <h2 className="font-platypi text-2xl md:text-4xl font-semibold">
+        Property, handled personally and made our priority.
+      </h2>
+      <p className="md:text-lg text-gray-700 mt-2 md:mt-4">
+        At Property Nirvana, we don't just manage property — we excel at it. Our
+        team combines deep expertise with genuine care, ensuring every buying,
+        selling or letting journey is handled to the highest standard. From
+        precise valuations and powerful marketing to seamless negotiations and
+        attentive aftercare, we pour detail and dedication into every step,
+        because your property deserves nothing less than the best. Contact us
+        today and discover how Property Nirvana can make your property goals a
+        reality.
+      </p>
+    </MaxWidthWrapper>
+  );
+}
+
 function LocalExperts() {
   return (
-    <MaxWidthWrapper className="mt-10 md:mt-20 mb-20 flex flex-col-reverse md:flex-row gap-4 md:gap-10 lg:gap-20 relative h-fit overflow-hidden">
+    <MaxWidthWrapper className="mt-14 md:mt-28 mb-20 flex flex-col-reverse md:flex-row gap-4 md:gap-10 lg:gap-20 relative h-fit overflow-hidden">
       <div className="py-4 md:py-10 p-4">
         <h2 className="font-platypi text-2xl md:text-4xl font-semibold">
           Your Local Property Experts
@@ -379,6 +399,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Cta />
       <LocalExperts />
       <TheRightMove />
       <ThinkingOfSelling />
