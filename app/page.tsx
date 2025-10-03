@@ -78,7 +78,7 @@ function Hero() {
               Landlords
             </Link>
             <Link
-              href="/renters-guide"
+              href="/tenants-guide"
               className={cn(
                 buttonVariants({
                   size: "xl",
@@ -276,7 +276,7 @@ function RentOutYourProperty() {
               </ul>
             </div>
             <Link
-              href="/renters-guide"
+              href="/tenants-guide"
               className={buttonVariants({
                 size: "lg",
                 className: "rounded-none",

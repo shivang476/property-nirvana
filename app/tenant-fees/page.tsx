@@ -3,10 +3,10 @@ import GuideEntry from "@/components/guide-entry";
 import HeadingFrame from "@/components/heading-frame";
 import MaxWidthWrapper from "@/components/max-width";
 
-export default function TenantGuide() {
+export default function TenantFees() {
   return (
     <div>
-      <HeadingFrame heading="Tenant Guide" />
+      <HeadingFrame heading="Tenants Fees" />
       <MaxWidthWrapper className="px-4">
         <FootNote className="mt-10">
           <FootNote.Title>Tenant Fees & Charges Guide</FootNote.Title>
@@ -24,7 +24,6 @@ export default function TenantGuide() {
             points={[
               "Equivalent to one week’s rent, subject to referencing and contract.",
               "Deducted from the total monies owed before move-in.",
-              "Calculation: Annual rent ÷ 52 × 1",
             ]}
           />
           <GuideEntry
@@ -32,7 +31,6 @@ export default function TenantGuide() {
             points={[
               "Equivalent to five weeks’ rent.",
               "Held as protection against damages or breaches of tenancy.",
-              "Calculation: Annual rent ÷ 52 × 5",
             ]}
           />
           <GuideEntry
@@ -59,7 +57,7 @@ export default function TenantGuide() {
           <GuideEntry
             title="6. Professional Memberships & Protection"
             points={[
-              "Oakwood Estates are proud members of: - The Property Ombudsman - The Deposit Protection Scheme (DPS) - Client Money Protect (CMP)",
+              "Property Nirvana are proud members of: - The Property Ombudsman - The Deposit Protection Scheme (DPS) - Client Money Protect (CMP)",
             ]}
           />
           <GuideEntry

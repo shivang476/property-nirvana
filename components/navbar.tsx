@@ -52,7 +52,7 @@ export default function Navbar() {
       href: "#",
       label: "Tenants",
       innerLinks: [
-        { href: "/renters-guide", label: "Tenants Guide" },
+        { href: "/tenants-guide", label: "Tenants Guide" },
         { href: "/tenant-fees", label: "Tenants Fees" },
       ],
     },

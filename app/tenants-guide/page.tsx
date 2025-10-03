@@ -3,10 +3,10 @@ import GuideEntry from "@/components/guide-entry";
 import HeadingFrame from "@/components/heading-frame";
 import MaxWidthWrapper from "@/components/max-width";
 
-export default function RentersGuide() {
+export default function TenantsGuide() {
   return (
     <div>
-      <HeadingFrame heading="Renters Guide" />
+      <HeadingFrame heading="Tenants Guide" />
       <MaxWidthWrapper className="px-4">
         <FootNote className="mt-10">
           <FootNote.Title>
