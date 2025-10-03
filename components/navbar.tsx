@@ -2,6 +2,7 @@
 import Image from "next/image";
 import MaxWidthWrapper from "./max-width";
 import Logo from "@/assets/logo.png";
+import LogoWhite from "@/assets/logo-white.png";
 import Link from "next/link";
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -108,14 +109,25 @@ export default function Navbar() {
       >
         <MaxWidthWrapper className="py-4 flex items-center justify-between px-4">
           {/* Logo */}
-          <Link
-            href="/"
-            className={cn(
-              "bg-white/90 md:p-2 group-hover:bg-transparent",
-              hasScrolled && "bg-transparent",
-            )}
-          >
-            <Image src={Logo} alt="Nirvana Logo" width={200} />
+          <Link href="/" className={cn("md:p-2")}>
+            <Image
+              src={Logo}
+              alt="Nirvana Logo"
+              width={200}
+              className={cn(
+                "hidden group-hover:block",
+                (hasScrolled || mobileOpen) && "block",
+              )}
+            />
+            <Image
+              src={LogoWhite}
+              alt="Nirvana Logo"
+              width={200}
+              className={cn(
+                "block group-hover:hidden",
+                (hasScrolled || mobileOpen) && "hidden",
+              )}
+            />
           </Link>
 
           {/* Desktop Nav - Changed from md to xl breakpoint */}

@@ -46,17 +46,25 @@ export default function BrandStory() {
 
         {/* Founder’s Story */}
         <div className="grid mt-14 gap-8">
-          <GuideEntry
-            title="Our Founder’s Story"
-            points={[
-              "After working in lettings for a number of years, I saw first-hand the horrors of how some agencies treated people’s investments and livelihoods — including my own parents’.",
-              "I witnessed rents being delayed or manipulated, deposits not being taken or protected, landlords left in the dark, and tenants ignored when urgent repairs were needed.",
-              "Some properties fell into disrepair, with safety checks skipped and compliance overlooked — all while clients were kept out of the loop.",
-              "Seeing my parents being mistreated made it personal. That experience was the turning point — I knew there had to be a better way built on trust, transparency and genuine care.",
-              "That’s why I started Property Nirvana: to create a service where landlords, tenants, buyers and sellers could feel confident their property and investment were in safe hands.",
-              "Every decision we make comes back to that mission. For me, property isn’t just business — it’s people’s lives, and it deserves to be handled personally and made the priority.",
-            ]}
-          />
+          <GuideEntry title="Our Founder’s Story">
+            After working in lettings for a number of years, I saw first-hand
+            the horrors of how some agencies treated people’s investments and
+            livelihoods — including my own parents’. I witnessed rents being
+            delayed or manipulated, deposits not being taken or protected,
+            landlords left in the dark, and tenants ignored when urgent repairs
+            were needed. Some properties fell into disrepair, with safety checks
+            skipped and compliance overlooked — all while clients were kept out
+            of the loop. Seeing my parents being mistreated made it personal.
+            That experience was the turning point — I knew there had to be a
+            better way built on trust, transparency and genuine care. That’s why
+            I started Property Nirvana: to create a service where landlords,
+            tenants, buyers and sellers could feel confident their property and
+            investment were in safe hands. Every decision we make comes back to
+            that mission. For me, property isn’t just business — it’s people’s
+            lives, and it deserves to be handled personally and made the
+            priority.
+            <br />
+          </GuideEntry>
         </div>
 
         <FootNote className="mt-14">

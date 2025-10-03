@@ -18,12 +18,12 @@ export function CtaCards({ className }: { className?: string }) {
       href: "/valuation",
     },
     {
-      title: "Sell With Property Nirvana",
+      title: "Our Extended Services",
       description:
-        "Book your appointment with us today and let us help you keep moving. We’ll be offering virtual valuations in the first...",
+        "Explore our services, including mortgages, professional photography, floor plans and support with compliance with the legal certifications.",
       buttonText: "Book Other Services",
       image: Cta2Img,
-      href: "/sellers-guide",
+      href: "/other-services",
     },
     {
       title: "Get in Touch",

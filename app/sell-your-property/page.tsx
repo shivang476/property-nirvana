@@ -15,7 +15,7 @@ function AgencyGuide() {
 
   const tableData = {
     fees: {
-      soleAgency: "0.7%",
+      soleAgency: "0.75%",
       jointAgency: "1.25%",
       multipleAgencies: "1.75%",
     },

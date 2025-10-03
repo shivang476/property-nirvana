@@ -158,11 +158,10 @@ function TheRightMove() {
           The Right Move for Your Property Journey
         </h2>
         <p className="md:text-lg text-gray-700 mt-2 md:mt-4">
-          At Property Nirvana, we understand that selling or letting your
-          property is a significant decision. That’s why we’re committed to
-          providing a seamless experience from start to finish. Our team of
-          dedicated professionals will guide you through every step of the
-          process, ensuring you feel confident and informed along the way.
+          From stylish apartments to family homes, we make buying, renting, and
+          investing simple, transparent, and stress-free. Whether you’re
+          searching for your next home or building your property portfolio,
+          we’ll help you find the right opportunity to match your goals.
         </p>
         <div className="flex mt-8 gap-4">
           <Link
@@ -295,23 +294,20 @@ function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Great location - walking distance to the metro and grocery stores. Building is quite at night.",
-      name: "Sophie Brown",
-      role: "Teacher",
+        "Mehar was excellent. His attention to detail and the speed in which he delivered suitable tenants was excellent! I can’t stress how exemplary he was in how he dealt with everything from discovery to close.highly recommend this estate agency! 10/10",
+      name: "Ameet S",
       starRating: 4,
     },
     {
       quote:
-        "Helpful agent and smooth paperwork. Would’ve liked clearer move-in instructions.",
-      name: "James Walker",
-      role: "Founder",
+        "Property Nirvana Estate Agency has been an excellent experience. They found a tenant for my property in no time and provided a full service at a very reasonable price. Their flat maintenance costs are fair and transparent — unlike some other agencies that overcharge. Highly recommended! Happy customer 👍",
+      name: "Ed S",
       starRating: 5,
     },
     {
       quote:
-        "Affordable rent but thin walls. Not ideal if you work from home and need silence.",
-      name: "Emily Thompson",
-      role: "Marketing Manager",
+        "Mehar has been excellent from the first phone call I had with him. His communication was great and his level of service is just exceptional. Honestly highly recommend to everyone, you want look back",
+      name: "Kanwal G",
       starRating: 4,
     },
   ];
@@ -338,7 +334,7 @@ function Testimonials() {
               </p>
               <div>
                 <h4 className="font-semibold mt-4">{testimonial.name}</h4>
-                <p className="text-sm text-gray-300">{testimonial.role}</p>
+                {/* <p className="text-sm text-gray-300">{testimonial.role}</p> */}
               </div>
             </CardContent>
           </Card>
