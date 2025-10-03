@@ -255,7 +255,7 @@ export default function LandlordServices() {
           serviceName="Fully Managed"
           description="The perfect solution for landlords seeking total peace of mind."
           detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
-          charges="7% of Monthly Rent (inc. VAT)"
+          charges="7% (inc. VAT)"
         />
         <ServiceDetails
           serviceName="Full Management + Guaranteed Rent"
