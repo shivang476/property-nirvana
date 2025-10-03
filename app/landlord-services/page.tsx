@@ -166,13 +166,13 @@ function ComparisonTable() {
                   Typical Fees
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  £800 inc. VAT
+                  £800 (inc. VAT)
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  5% inc. VAT
+                  5% (inc. VAT)
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  7% inc. VAT
+                  7% (inc. VAT)
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
                   Subject to Property
@@ -243,13 +243,13 @@ export default function LandlordServices() {
         <ServiceDetails
           serviceName="Tenant Introduction"
           detail="We: - Advise on furniture, decoration, and presentation to maximise rental value. - Market your property across our website, major portals, lettings lists, and local press. - Arrange and attend all tenant viewings (7 days a week, 8am–9pm). - Carry out professional tenant referencing, including credit and guarantor checks. - Draft tenancy agreements and necessary documentation. - Collect the first month’s rent and deposit. - Notify utility companies and local authorities of new occupiers. - Set up tenant standing orders to pay future rent directly to you."
-          charges="£800 inc. VAT"
+          charges="£800 (inc. VAT)"
         />
         <ServiceDetails
           serviceName="Rent Collection"
           description="Ideal if you want us to handle rent payments but prefer to manage repairs yourself. "
           detail="In addition to Let Only, we: - Collect rent on your behalf and transfer funds directly to your bank. - Provide monthly rent statements with income, expenses, and VAT breakdowns. - Chase late payments promptly and advise on legal recovery if necessary. - Handle renewals and lease extensions."
-          charges="5% inc. VAT"
+          charges="5% (inc. VAT)"
         />
         <ServiceDetails
           serviceName="Fully Managed"
