@@ -116,10 +116,10 @@ function ComparisonTable() {
   ];
 
   const serviceLevels = [
-    { key: "letOnly", label: "Let Only" },
+    { key: "letOnly", label: "Tenant Introduction" },
     { key: "rentCollection", label: "Rent Collection" },
-    { key: "fullManagement", label: "Full Management" },
-    { key: "rentGuarantee", label: "Rent Guarantee" },
+    { key: "fullManagement", label: "Fully Managed" },
+    { key: "rentGuarantee", label: "FM + Guaranteed Rent" },
   ] as const;
   return (
     <div className="mt-10 md:mt-20">
@@ -166,16 +166,16 @@ function ComparisonTable() {
                   Typical Fees
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  One-off fee of £354 inc. VAT
+                  £800 inc. VAT
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  10.8% of monthly rent
+                  5% inc. VAT
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  16.8% of monthly rent
+                  7% inc. VAT
                 </td>
                 <td className="border border-black p-4 text-center font-medium text-sm">
-                  16.8% of monthly rent
+                  Subject to Property
                 </td>
               </tr>
             </tbody>
@@ -241,31 +241,27 @@ export default function LandlordServices() {
         </div>
         <ComparisonTable />
         <ServiceDetails
-          serviceName="Let Only Service"
+          serviceName="Tenant Introduction"
           detail="We: - Advise on furniture, decoration, and presentation to maximise rental value. - Market your property across our website, major portals, lettings lists, and local press. - Arrange and attend all tenant viewings (7 days a week, 8am–9pm). - Carry out professional tenant referencing, including credit and guarantor checks. - Draft tenancy agreements and necessary documentation. - Collect the first month’s rent and deposit. - Notify utility companies and local authorities of new occupiers. - Set up tenant standing orders to pay future rent directly to you."
-          charges="One-off payment of £354 inc."
-          additionalCharges="VAT (per tenancy)"
+          charges="£800 inc. VAT"
         />
         <ServiceDetails
-          serviceName="Rent Collection Service"
+          serviceName="Rent Collection"
           description="Ideal if you want us to handle rent payments but prefer to manage repairs yourself. "
           detail="In addition to Let Only, we: - Collect rent on your behalf and transfer funds directly to your bank. - Provide monthly rent statements with income, expenses, and VAT breakdowns. - Chase late payments promptly and advise on legal recovery if necessary. - Handle renewals and lease extensions."
-          charges="10.8% of monthly rent"
-          additionalCharges="(inc. VAT)"
+          charges="5% inc. VAT"
         />
         <ServiceDetails
-          serviceName="Full Management Service"
+          serviceName="Fully Managed"
           description="The perfect solution for landlords seeking total peace of mind."
           detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
-          charges="16.8% of monthly rent"
-          additionalCharges="(inc. VAT)"
+          charges="7% of Monthly Rent (inc. VAT)"
         />
         <ServiceDetails
-          serviceName="Full Management + Guaranteed Rent Service"
+          serviceName="Full Management + Guaranteed Rent"
           description="The perfect solution for landlords seeking total peace of mind."
           detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
           charges="Price is Subject to Each Property"
-          additionalCharges="(inc. VAT)"
         />
         <FootNote>
           <FootNote.Title>Why Choose Property Nirvana?</FootNote.Title>

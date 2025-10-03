@@ -56,7 +56,18 @@ export default function Navbar() {
         { href: "/tenant-fees", label: "Tenants Fees" },
       ],
     },
-    { href: "/other-services", label: "Other Services" },
+    {
+      href: "/other-services",
+      label: "Other Services",
+      innerLinks: [
+        { href: "/other-services", label: "Mortgages" },
+        { href: "/other-services", label: "Gas Safety Checks" },
+        { href: "/other-services", label: "Electrical Checks" },
+        { href: "/other-services", label: "EPC" },
+        { href: "/other-services", label: "Professional Photography" },
+        { href: "/other-services", label: "Floorplan Drawing" },
+      ],
+    },
   ];
 
   React.useEffect(() => {
@@ -247,7 +258,7 @@ export default function Navbar() {
                     <div className="space-y-2 pl-4">
                       {link.innerLinks.map((innerLink, innerIdx) => (
                         <Link
-                          key={innerLink.href}
+                          key={`${innerLink.href}__${innerIdx}`}
                           href={innerLink.href}
                           className={cn(
                             "text-sm block text-gray-600 hover:text-black py-1 px-2 rounded hover:bg-gray-50 transition-all duration-200",
