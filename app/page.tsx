@@ -183,9 +183,9 @@ function TheRightMove() {
               variant: "default",
               className: "rounded-none font-semibold",
             })}
-            href="/sellers-guide"
+            href="/buyers-guide"
           >
-            Sell With Us
+            Buy with us
           </Link>
           <Link
             href="/landlord-services"
@@ -195,7 +195,7 @@ function TheRightMove() {
               className: "rounded-none font-semibold",
             })}
           >
-            Let With Us
+            Rent with us
           </Link>
         </div>
       </div>
@@ -309,7 +309,7 @@ function Testimonials() {
       quote:
         "Mehar was excellent. His attention to detail and the speed in which he delivered suitable tenants was excellent! I can’t stress how exemplary he was in how he dealt with everything from discovery to close.highly recommend this estate agency! 10/10",
       name: "Ameet S",
-      starRating: 4,
+      starRating: 5,
     },
     {
       quote:
@@ -321,7 +321,7 @@ function Testimonials() {
       quote:
         "Mehar has been excellent from the first phone call I had with him. His communication was great and his level of service is just exceptional. Honestly highly recommend to everyone, you want look back",
       name: "Kanwal G",
-      starRating: 4,
+      starRating: 5,
     },
   ];
   return (

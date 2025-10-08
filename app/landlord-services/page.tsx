@@ -189,9 +189,9 @@ function ComparisonTable() {
 type ServiceDetailsProps = {
   serviceName: string;
   description?: string;
-  detail: string;
   charges?: string;
   additionalCharges?: string;
+  children?: React.ReactNode;
 };
 
 function ServiceDetails(props: ServiceDetailsProps) {
@@ -201,9 +201,9 @@ function ServiceDetails(props: ServiceDetailsProps) {
         {props.serviceName}
       </h2>
       <p className="text-gray-700 text-sm md:text-base">{props.description}</p>
-      {props.detail && (
+      {props.children && (
         <p className="mt-4 text-sm md:text-base border border-black rounded-lg p-2 md:p-4 font-medium">
-          {props.detail}
+          {props.children}
         </p>
       )}
       {props.charges && (
@@ -242,27 +242,126 @@ export default function LandlordServices() {
         <ComparisonTable />
         <ServiceDetails
           serviceName="Tenant Introduction"
-          detail="We: - Advise on furniture, decoration, and presentation to maximise rental value. - Market your property across our website, major portals, lettings lists, and local press. - Arrange and attend all tenant viewings (7 days a week, 8am–9pm). - Carry out professional tenant referencing, including credit and guarantor checks. - Draft tenancy agreements and necessary documentation. - Collect the first month’s rent and deposit. - Notify utility companies and local authorities of new occupiers. - Set up tenant standing orders to pay future rent directly to you."
           charges="£800 (inc. VAT)"
-        />
+        >
+          Property Nirvana will;
+          <ul className="list-disc list-inside mt-2">
+            <li>
+              Provide expert advice on furniture, décor, and presentation to
+              help maximise your rental income
+            </li>
+            <li>
+              Promote your property through our website, leading property
+              portals and targeted lettings lists
+            </li>
+            <li>
+              Arrange and personally attend tenant viewings, 7 days a week
+              between 8am and 10pm
+            </li>
+            <li>
+              Carry out thorough tenant referencing, including credit checks and
+              guarantor verification
+            </li>
+            <li>
+              Prepare tenancy agreements and all required legal documentation
+            </li>
+            <li>
+              Collect the first month’s rent and security deposit on your behalf
+            </li>
+            <li>
+              Inform utility providers and local authorities of the new tenancy
+            </li>
+            <li>
+              Set up tenant standing orders to ensure rent is paid directly to
+              you
+            </li>
+          </ul>
+        </ServiceDetails>
         <ServiceDetails
           serviceName="Rent Collection"
-          description="Ideal if you want us to handle rent payments but prefer to manage repairs yourself. "
-          detail="In addition to Let Only, we: - Collect rent on your behalf and transfer funds directly to your bank. - Provide monthly rent statements with income, expenses, and VAT breakdowns. - Chase late payments promptly and advise on legal recovery if necessary. - Handle renewals and lease extensions."
+          description="Perfect for busy landlords, we handle all rent collection to ensure steady income and peace of mind."
           charges="5% (inc. VAT)"
-        />
+        >
+          In addition to Tenant Introduction we;
+          <ul className="list-disc list-inside mt-2">
+            <li>
+              Collect rent on your behalf and transfer it directly to your bank
+              account.
+            </li>
+            <li>
+              Provide detailed monthly statements showing income, expenses, and
+              VAT breakdowns.
+            </li>
+            <li>
+              Follow up on late payments promptly and guide you on legal
+              recovery if required.
+            </li>
+            <li>
+              Manage tenancy renewals and lease extensions with efficiency and
+              care.
+            </li>
+          </ul>
+        </ServiceDetails>
         <ServiceDetails
           serviceName="Fully Managed"
-          description="The perfect solution for landlords seeking total peace of mind."
-          detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
+          description="For landlords seeking maximum peace of mind, our fully managed service provides end-to-end care and professional oversight of their property."
           charges="7% (inc. VAT)"
-        />
+        >
+          In addition to Tenant Introduction and Rent Collection we;
+          <ul className="list-disc list-inside mt-2">
+            <li>
+              Act as the main point of contact for all tenant communication
+            </li>
+            <li>
+              Oversee day-to-day repairs and maintenance within pre-agreed
+              spending limits
+            </li>
+            <li>
+              Arrange tenant check-in and check-out, ensuring full inventory
+              compliance
+            </li>
+            <li>
+              Carry out quarterly property inspections with detailed
+              photographic reports
+            </li>
+            <li>
+              Ensure all legal safety obligations are met, including annual gas
+              certificates
+            </li>
+            <li>
+              Coordinate prompt works to maintain tenant satisfaction and
+              encourage renewals
+            </li>
+            <li>
+              Manage the full end-of-tenancy process, including deposit handling
+              with inventory specialist
+            </li>
+          </ul>
+        </ServiceDetails>
         <ServiceDetails
           serviceName="Full Management + Guaranteed Rent"
-          description="The perfect solution for landlords seeking total peace of mind."
-          detail="In addition to Let Only and Rent Collection, we: - Manage day-to-day repairs and maintenance (within pre-agreed spending limits). - Arrange tenant check-in and check-out services, ensuring inventory compliance. - Conduct quarterly inspections with photographic condition reports. - Ensure compliance with legal safety requirements (e.g. annual gas certificates). - Coordinate prompt works to encourage tenant satisfaction and tenancy renewals. - Manage end-of-tenancy processes, including deposit handling via inventory specialists."
+          description="Designed for hands-off landlords, our fully managed and guaranteed rent option means we take care of everything while you enjoy a steady, reliable income."
           charges="Price is Subject to Each Property"
-        />
+        >
+          In addition to Fully Managed we;
+          <ul className="list-disc list-inside mt-2">
+            <li>
+              Provide guaranteed rental income each month, even if tenants fail
+              to pay.
+            </li>
+            <li>
+              Arrange cover through our trusted insurance partner for complete
+              peace of mind.
+            </li>
+            <li>
+              Continue paying rent during void periods (subject to policy
+              terms).
+            </li>
+            <li>
+              Include full legal expenses cover in the event of tenant default.
+            </li>
+          </ul>
+        </ServiceDetails>
         <FootNote>
           <FootNote.Title>Why Choose Property Nirvana?</FootNote.Title>
           <FootNote.Content>

@@ -128,6 +128,41 @@ export default function SellYourProperty() {
           />
         </div>
         <AgencyGuide />
+        <FootNote className="mt-10">
+          <FootNote.Title>Sole Agency</FootNote.Title>
+          <FootNote.Content>
+            With sole agency, you get one dedicated estate agent working
+            exclusively to sell your property. At Property Nirvana, this means
+            you’ll have a single, committed point of contact guiding you through
+            the entire process. Sole agency is usually the most cost-effective
+            option, as the commission fee is lower than with other types of
+            agreements, and you only pay if we successfully find you a buyer and
+            complete the sale.
+          </FootNote.Content>
+        </FootNote>
+        <FootNote className="mt-10">
+          <FootNote.Title>Joint Agency</FootNote.Title>
+          <FootNote.Content>
+            With joint agency, you benefit from two estate agents working
+            together to market your property. At Property Nirvana, we partner
+            with another trusted agent to give your home wider exposure while
+            still keeping the process efficient and coordinated. Both agents
+            share responsibility for finding a buyer, and once the property is
+            sold, the commission is split between us.
+          </FootNote.Content>
+        </FootNote>
+        <FootNote className="mt-10">
+          <FootNote.Title>Multiple Agency</FootNote.Title>
+          <FootNote.Content>
+            With multiple agency, your property is marketed by several different
+            estate agents at the same time. Only the agent who secures the buyer
+            and completes the sale earns the commission. Property Nirvana can be
+            one of those agents, giving your property maximum exposure while
+            creating healthy competition in the market. This approach often
+            delivers quicker results, though the commission fee is usually
+            higher than with sole or joint agency.
+          </FootNote.Content>
+        </FootNote>
         <div className="flex justify-center mt-20">
           <Link
             href="/contact"
