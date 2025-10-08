@@ -26,13 +26,13 @@ export default function OtherServices() {
             ]}
           />
           <GuideEntry
-            title="2. Gas Safety Certificates"
+            title="2. Gas Safety Certificate"
             points={[
               "Certified inspections to ensure your property meets legal safety standards.",
             ]}
           />
           <GuideEntry
-            title="3. Electrical Safety Certificates"
+            title="3. EICR Certificate"
             points={[
               "Professional testing to guarantee your property is safe and compliant.",
             ]}

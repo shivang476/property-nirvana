@@ -20,7 +20,7 @@ export function CtaCards({ className }: { className?: string }) {
     {
       title: "Our Extended Services",
       description:
-        "Explore our services, including mortgages, professional photography, floor plans and support with compliance with the legal certifications.",
+        "Explore our services, including mortgages, professional photography, floor plans and support with compliance certificates.",
       buttonText: "Book Other Services",
       image: Cta2Img,
       href: "/other-services",

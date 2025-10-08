@@ -62,8 +62,8 @@ export default function Navbar() {
       label: "Other Services",
       innerLinks: [
         { href: "/other-services", label: "Mortgages" },
-        { href: "/other-services", label: "Gas Safety Checks" },
-        { href: "/other-services", label: "Electrical Checks" },
+        { href: "/other-services", label: "Gas Safety Certificate" },
+        { href: "/other-services", label: "EICR Certificate" },
         { href: "/other-services", label: "EPC" },
         { href: "/other-services", label: "Professional Photography" },
         { href: "/other-services", label: "Floorplan Drawing" },
